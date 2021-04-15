@@ -1,0 +1,268 @@
+header {
+    position: relative;
+}
+
+
+#title-container {
+    /* border: 1px red solid; */
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    border-radius: 70px;
+    box-shadow: 5px 5px rgb(189, 189, 189);
+    padding: 8px;
+}
+
+#title {
+    font-size: 80px;
+    color:  rgb(21, 137, 167);
+    font-family: "Pacifico", 'Times New Roman', Times, serif;
+}
+
+
+
+
+#img-banner {
+    width: 100%;
+    max-height: 500px;
+    /* border: 1px red solid; */
+    /* crop this img */
+    /* max-height: 400px; */
+}
+
+
+
+a {
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    color: rgb(24, 6, 6);
+}
+/* //add styling to tabs */
+#tabs {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(233, 232, 232);
+    /* padding: 5px; */
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    font-family: "Open Sans Condensed", arial;
+    font-size: 35px;
+    font-weight: 600;
+    /* color: rgb(21, 137, 167); */
+}
+
+#tabs a:first-child {
+    background-color: white;
+}
+
+#tabs a:hover {
+    color: rgb(73, 159, 180);
+}
+
+/* CONTENT */
+
+
+/* HOMEPAGE */
+
+#cone-img {
+    border-radius: 50%;
+}
+
+
+
+.quote {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.quote-body {
+    color: rgb(21, 137, 167);
+    margin-top: 8rem;
+    font-family: "Pacifico", 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.quote .author {
+    /* border: 1px red solid; */
+    text-align: end;
+    font-size: 16px;
+    margin: 2em 0 0 0;
+}
+
+.container-1 {
+    border: 1px solid;
+    display: flex;
+}
+
+.container-2 {
+    border: 1px solid;
+}
+
+
+
+
+/* .homepage-text{
+    margin: 4em 2em 2em 2em;
+} */
+
+/* /// */
+
+
+.content-body {
+    margin-top: 50px;
+    min-height: 550px;
+    font-family: "Libre Franklin";
+}
+
+
+#featured-imgs {
+    display: flex;
+    justify-content: space-around;
+}
+
+#featured-imgs img {
+    max-width: 400px;
+}
+
+/* ABOUT US */
+#about-title {
+    font-size: 30px;
+    margin-bottom: 1em;
+}
+
+#about-container {
+    border: 2px solid red;
+    margin: 2em;
+    padding: 0 4rem 0 4rem;
+}
+
+#about-img {
+}
+
+#about-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about-container p{
+    line-height: 2em;
+    margin-left: 2rem;
+    font-size: 20px;
+}
+
+/* /////////////////////// */
+
+/* contacts */
+
+.address-info {
+    /* border:1px red solid; */
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+
+}
+
+.address-info .icon{
+    max-height: 50px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid rgb(24, 6, 6);;
+    padding: 1rem;
+}
+
+
+.contact-info div,
+.socials-info div{
+    display: flex;
+    align-items: center;
+}
+
+.contact-container .icon {
+    max-height: 25px;
+    margin-right: 0.5em;
+}
+
+
+#google-maps {
+    margin-left: 2rem;
+}
+
+
+
+/* MEnu styling */
+
+/* caption absolutle positioned over frame */
+
+.frame {
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid;
+    height: 330px;
+    width: fit-content;
+    /* width: 450px; */
+}
+
+.frame img {
+
+}
+
+
+#menu-content {
+    border: 1px red solid;
+    padding: 2em;
+}
+
+#menu-content h2 {
+    color: grey; 
+}
+
+#menu-content li {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 1em 0;
+}
+
+#menu-content .title {
+    font-size: 18px;
+}
+
+#menu-content .description {
+    color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+/* foOTER STYLING */
+
+
+
+footer {
+    min-height: 50px;
+    background-color: rgb(192, 221, 228);
+}
