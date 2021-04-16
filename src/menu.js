@@ -3,12 +3,13 @@ import {slideshow} from "./slideshow.js"
 
 
 let img_paths = [
-    "../imgs/pandan.PNG",
-    "../imgs/raspberry.PNG",
-    "../imgs/peach_marmalade.PNG",
-    "../imgs/butterscotch.PNG",
-    "../imgs/cashew.PNG",
-    "../imgs/apricot.PNG"
+    //IMG PATH AND CAPTION
+    ["../imgs/pandan.PNG", "Green Isle"],
+    ["../imgs/raspberry.PNG", "Berry Blast"],
+    ["../imgs/peach_marmalade.PNG", "Peach Marmalade"],
+    ["../imgs/butterscotch.PNG", "Sir Buttersworth"],
+    ["../imgs/cashew.PNG", "Nutty"],
+    ["../imgs/apricot.PNG", "Sunset Avenue"]
 ];
 
 const menu = () => {
@@ -18,7 +19,6 @@ const menu = () => {
     let menu_content = document.createElement("div");
     menu_content.id = "menu-content";
 
-    // appending content
     menu_content.appendChild(slideshow(img_paths));
     menu_content.insertAdjacentHTML("beforeend", `    
     <ul>
@@ -95,7 +95,7 @@ const menu = () => {
         </li>
         <li>
             <div class="info">
-                <p class="title">Sunset Ave.</p>
+                <p class="title">Sunset Avenue</p>
                 <p class="description">Our signature apricot ice cream</p>
             </div>
             <p class="price">$7</p>
@@ -127,27 +127,3 @@ const menu = () => {
     body.appendChild(menu_content);
     return body;
 };
-
-
-
-
-
-
-
-
-
-
-/* <div id="featured-imgs">
-        <div class="featured-item">
-            <img src="../imgs/raspberry.PNG">
-            <p>Raspberry</p>
-        </div>
-        <div class="featured-item">
-            <img src="../imgs/peach_marmalade.PNG">
-            <p>Peach Marmalade</p>
-        </div>
-        <div class="featured-item">
-            <img src="../imgs/raspberry.PNG">
-            <p>Coffee Crisp</p>
-        </div>
-    </div> */

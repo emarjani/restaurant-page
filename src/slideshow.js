@@ -1,6 +1,5 @@
 export {slideshow}
 
-//add dots and maybe captions? have to process captions then
 const slideshow = (img_paths) => {
 
     let index = 0;
@@ -9,7 +8,6 @@ const slideshow = (img_paths) => {
     let button_array = Array.from(gallery_buttons.children);
 
     //Functions
-
     const getIndex = (i) => {
         switch (i) {
             case (-1):
@@ -34,7 +32,7 @@ const slideshow = (img_paths) => {
     const swipe = (() => {
         let repeat;
         const start = () => {
-            repeat = setInterval(function(){changeSlide(1)}, 5000);
+            repeat = setInterval(function(){changeSlide(1)}, 7000);
         };
         //makes sure the interval timer gets reset with each button click;
         const reset = () => {
@@ -55,18 +53,23 @@ const slideshow = (img_paths) => {
         button_array[index].style.backgroundColor = "rgb(136, 136, 136)";
     };
 
-
+    const setGalleryAnimation = () => {
+        for (let i=0; i < gallery.length; i++) {
+            //if no key frames fadeIn in css file, no transition will be added.
+            gallery[i].style.animation = "fadeIn 1.5s";
+        }
+    }
 
     // CREATE ELEMENTS
 
     let body = document.createElement("div");
     body.setAttribute("class", "slideshow");
 
-    //frame, caption, buttons (prev/nextt)
+    //will contain frame, caption, buttons (prev/next)
     let container_1 = document.createElement("div");
     container_1.setAttribute("class", "container-1");
 
-    //circle buttons
+    //will contain circle buttons
     let container_2 = document.createElement("div");
     container_2.setAttribute("class", "container-2");
 
@@ -88,8 +91,6 @@ const slideshow = (img_paths) => {
     // _________________________________
 
     // EVENT LISTENERS
-
-    //event listeners for slide changes 
     prev_button.addEventListener("click", function() {
         changeSlide(-1);
         swipe.reset();
@@ -100,23 +101,17 @@ const slideshow = (img_paths) => {
         swipe.reset();
     });
 
-    //event listeners for gallery buttons 
     button_array.forEach(button => {
         button.addEventListener("click", function() {
             index = getButtonIndex(button);
             changeButtonColors(index);
 
-            //logic to switch tab based on gallery/button index
             frame.innerHTML = "";
             frame.appendChild(gallery[index]);
             swipe.reset();
         });
     });
 
-    
-    //is there a more concise way of doing this?
-
-    //append caption to frame later
     container_1.appendChild(prev_button);
     container_1.appendChild(frame);
     container_1.appendChild(next_button);
@@ -127,36 +122,40 @@ const slideshow = (img_paths) => {
     body.appendChild(container_2);
 
     //Set up auto swipe
-    swipe.start();
+    swipe.start()
+
+    setGalleryAnimation();
 
     //set intial button color
     changeButtonColors(index);
 
-    //return entire slideshow
     return body;
 };
 
 
-//probably make this more concise later
 
-//if you want to add caption, it needs to attach to each gallery info.
-//something like <div class=gallery item><img><p>caption</p></div>
-
-//this returns an ARRAY of img objects NODES
 function createGallery(img_paths) {
     let gallery = [];
+
     for (let i=0; i < img_paths.length; i++) {
-        let slide = document.createElement("img");
-        slide.setAttribute("src", `${img_paths[i]}`);
-        gallery.push(slide);
-    };
-    //array of img objects
+        let item = document.createElement("div");
+        item.setAttribute("class", "gallery-item");
+
+        let image = document.createElement("img");
+        image.setAttribute("src", `${img_paths[i][0]}`);
+
+        let caption = document.createElement("p");
+        caption.innerText = `${img_paths[i][1]}`;
+
+        item.appendChild(image);
+        item.appendChild(caption);
+        gallery.push(item);
+    }
     return gallery;
 }
 
 //this returns a NODE with CHILD NODES that are buttons
 function createGalleryButtons(gallery) {
-    //button should have id corresponding to index of gallery img
     let gallery_buttons = document.createElement("div");
     gallery_buttons.setAttribute("class", "gallery-buttons");
 
