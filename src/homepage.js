@@ -11,14 +11,14 @@ const homepage = () => {
         </div>
 
 
-        <div class="container-1">
+        <div class="">
             <p class="text">
             With both the "old standbys" ("incredible" cookies and cream) and more "interesting" scoops, these parlors "nail it", offering "creamy" housemade ice cream that's a "perfect balance of sweetness and strong flavor"; the simple setups include minimal seating, but Brooklyn has a few outdoor tables.
             </p>
             <img id="cone-img" src="../imgs/cone.PNG">
         </div>
 
-        <div class="container-2">
+        <div class="">
         </div>
         
     `;

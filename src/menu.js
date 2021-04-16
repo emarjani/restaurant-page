@@ -7,7 +7,8 @@ let img_paths = [
     "../imgs/raspberry.PNG",
     "../imgs/peach_marmalade.PNG",
     "../imgs/butterscotch.PNG",
-    "../imgs/cashew.PNG"
+    "../imgs/cashew.PNG",
+    "../imgs/apricot.PNG"
 ];
 
 const menu = () => {
@@ -20,7 +21,6 @@ const menu = () => {
     // appending content
     menu_content.appendChild(slideshow(img_paths));
     menu_content.insertAdjacentHTML("beforeend", `    
-    <h2>Flavour list</h2>
     <ul>
         <li>
             <div class="info">
@@ -38,8 +38,37 @@ const menu = () => {
         </li>
         <li>
             <div class="info">
+                <p class="title">Loco Choco</p>
+                <p class="description">Dark chocolate ice cream, with oreo crumbs and milk chocolate shavings.</p>
+            </div>
+            <p class="price">$5</p>
+        </li>
+        
+        <li>
+            <div class="info">
+                <p class="title">Berry Blast</p>
+                <p class="description">Fresh raspberry and strawberry ice cream</p>
+            </div>
+            <p class="price">$5</p>
+        </li>
+        <li>
+            <div class="info">
+                <p class="title">Sir Buttersworth</p>
+                <p class="description">Classic butterscotch ice cream, splendid!</p>
+            </div>
+            <p class="price">$5</p>
+        </li>
+        <li>
+            <div class="info">
                 <p class="title">Blueberries 'N Cream</p>
                 <p class="description">Blueberry jam rolled into our Raw Milk ice cream</p>
+            </div>
+            <p class="price">$6</p>
+        </li>
+        <li>
+            <div class="info">
+                <p class="title">Nutty</p>
+                <p class="description">Buttery-smooth cashew ice cream</p>
             </div>
             <p class="price">$6</p>
         </li>
@@ -59,14 +88,21 @@ const menu = () => {
         </li>
         <li>
             <div class="info">
-                <p class="title">Loco Choco</p>
-                <p class="description">Dark chocolate ice cream, with oreo crumbs and milk chocolate shavings.</p>
+                <p class="title">Green Isle</p>
+                <p class="description">A tropical blend of pandan and coconut ice cream.</p>
             </div>
             <p class="price">$6</p>
         </li>
         <li>
             <div class="info">
-                <p class="title">Le Citron Vert</p>
+                <p class="title">Sunset Ave.</p>
+                <p class="description">Our signature apricot ice cream</p>
+            </div>
+            <p class="price">$7</p>
+        </li>
+        <li>
+            <div class="info">
+                <p class="title">Citron Vert</p>
                 <p class="description">Lime flavoured ice cream, infused with sea salt.</p>
             </div>
             <p class="price">$7</p>
@@ -75,6 +111,13 @@ const menu = () => {
             <div class="info">
                 <p class="title">Banana Agave</p>
                 <p class="description">Vegan banana ice cream, made with coconut milk and agave</p>
+            </div>
+            <p class="price">$7</p>
+        </li>
+        <li>
+            <div class="info">
+                <p class="title">Peach Marmalade</p>
+                <p class="description">Citrus-y, sweet peach marmalade</p>
             </div>
             <p class="price">$7</p>
         </li>
