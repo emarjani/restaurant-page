@@ -1,3 +1,5 @@
+@import "slideshow.css";
+
 header {
     position: relative;
 }
@@ -22,8 +24,6 @@ header {
     color:  rgb(21, 137, 167);
     font-family: "Pacifico", 'Times New Roman', Times, serif;
 }
-
-
 
 
 #img-banner {
@@ -97,24 +97,6 @@ a {
     font-size: 16px;
     margin: 2em 0 0 0;
 }
-
-/* .container-1 {
-    border: 1px solid;
-    display: flex;
-}
-
-.container-2 {
-    border: 1px solid;
-} */
-
-
-
-
-/* .homepage-text{
-    margin: 4em 2em 2em 2em;
-} */
-
-/* /// */
 
 
 .content-body {
@@ -211,59 +193,6 @@ a {
 
 /* MEnu styling */
 
-/* GALLERY STYLING  */
-
-.slideshow button {
-    border: none;
-    outline: none;
-}
-
-.gallery-buttons {
-    /* border: 1px red solid; */
-    margin-top: 1rem;
-}
-
-.gallery-buttons button {
-    border-radius: 50%;
-    min-height: 17px;
-    min-width: 17px;
-    margin: 0.5em;
-}
-
-.container-1 button {
-    display: relative;
-    height: fit-content;
-    background-color: transparent;
-
-    font-family: "Open Sans Condensed", arial;
-    font-weight: 600;
-    font-size: 40px;
-    color: rgb(207, 207, 207);
-}
-
-.slideshow .container-1,
-.slideshow .container-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.frame {
-    margin: 1em 7em 1em 7em;
-}
-
-.gallery-item img{
-    height: 300px;
-    width: 350px;
-}
-
-.gallery-item p{
-    margin-top: 2rem;
-    text-align: center;
-    color: rgb(153, 153, 153);
-    font-style: oblique;
-    /* border: 1px green solid; */
-}
 
 #menu-content {
     /* border: 1px red solid; */
@@ -304,29 +233,8 @@ footer p {
 }
 
 
-/* ANIMATION */
 
-@keyframes fadeIn {
-    0% {opacity: 0.6};
-    100% {opacity: 1};
-}
 
-@-moz-keyframes fadeIn {
-    0% {opacity: 0.6};
-    100% {opacity:1;}
-}
 
-@-webkit-keyframes fadeIn {
-    0% {opacity: 0.6};
-    100% {opacity:1;}
-}
 
-@-o-keyframes fadeIn {
-    0% {opacity: 0.6};
-    100% {opacity:1;}
-}
 
-@-ms-keyframes fadeIn {
-    0% {opacity: 0.6};
-    100% {opacity:1;}
-}
