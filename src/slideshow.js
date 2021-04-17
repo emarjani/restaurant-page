@@ -8,7 +8,9 @@ const slideshow = (img_paths) => {
     let button_array = Array.from(gallery_buttons.children);
 
     //Functions
-    const getIndex = (i) => {
+
+    //ensures index is within range of 0 to gallery.length - 1
+    const checkIndex = (i) => {
         switch (i) {
             case (-1):
                 return gallery.length -1;
@@ -21,18 +23,18 @@ const slideshow = (img_paths) => {
         }
     };
 
-    //maybe rename this to moveone slide or smth
-    const changeSlide = (num) => {
-        index = getIndex(index + num);
+    //input either -1 or 1, which will determine the direction of slide change
+    const moveSlide = (num) => {
+        index = checkIndex(index + num);
         changeButtonColors(index);
         frame.innerHTML = "";
         frame.appendChild(gallery[index]);
     };
     
-    const swipe = (() => {
+    const auto_swipe = (() => {
         let repeat;
         const start = () => {
-            repeat = setInterval(function(){changeSlide(1)}, 7000);
+            repeat = setInterval(function(){moveSlide(1)}, 7000);
         };
         //makes sure the interval timer gets reset with each button click;
         const reset = () => {
@@ -42,7 +44,7 @@ const slideshow = (img_paths) => {
         return {start, reset}
     })();
 
-    //to grab button index from child/parent node of gallery button
+    //to grab button index from parent node of gallery button
     const getButtonIndex = (button) => {
         return Array.from(button.parentNode.children).indexOf(button);
     };
@@ -92,13 +94,13 @@ const slideshow = (img_paths) => {
 
     // EVENT LISTENERS
     prev_button.addEventListener("click", function() {
-        changeSlide(-1);
-        swipe.reset();
+        moveSlide(-1);
+        auto_swipe.reset();
     });
 
     next_button.addEventListener("click", function(){ 
-        changeSlide(1);
-        swipe.reset();
+        moveSlide(1);
+        auto_swipe.reset();
     });
 
     button_array.forEach(button => {
@@ -108,22 +110,19 @@ const slideshow = (img_paths) => {
 
             frame.innerHTML = "";
             frame.appendChild(gallery[index]);
-            swipe.reset();
+            auto_swipe.reset();
         });
     });
 
     container_1.appendChild(prev_button);
     container_1.appendChild(frame);
     container_1.appendChild(next_button);
-
     container_2.appendChild(gallery_buttons);
 
     body.appendChild(container_1);
     body.appendChild(container_2);
 
-    //Set up auto swipe
-    swipe.start()
-
+    auto_swipe.start()
     setGalleryAnimation();
 
     //set intial button color
@@ -133,7 +132,7 @@ const slideshow = (img_paths) => {
 };
 
 
-
+//this returns an ARRAY of nodes (gallery-item), that contains a gallery img and caption
 function createGallery(img_paths) {
     let gallery = [];
 

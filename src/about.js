@@ -4,10 +4,8 @@ const about = () => {
     let body = document.createElement("div");
     body.setAttribute("class", "content-body");
 
-    //add img here maybe
     body.innerHTML = `
-
-
+    
     <div id="about-container">
         <h2 id="about-title"><span class="blue">Who</span> are we?</h2>
 
