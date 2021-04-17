@@ -23,12 +23,13 @@ const slideshow = (img_paths) => {
         }
     };
 
-    //input either -1 or 1, which will determine the direction of slide change
+    //num is the num of places you want the gallery index to move by, with respect to current index (- or +)
     const moveSlide = (num) => {
         index = checkIndex(index + num);
         changeButtonColors(index);
         frame.innerHTML = "";
         frame.appendChild(gallery[index]);
+        auto_swipe.reset();
     };
     
     const auto_swipe = (() => {
@@ -57,7 +58,6 @@ const slideshow = (img_paths) => {
 
     const setGalleryAnimation = () => {
         for (let i=0; i < gallery.length; i++) {
-            //if no key frames fadeIn in css file, no transition will be added.
             gallery[i].style.animation = "fadeIn 1.5s";
         }
     }
@@ -95,22 +95,16 @@ const slideshow = (img_paths) => {
     // EVENT LISTENERS
     prev_button.addEventListener("click", function() {
         moveSlide(-1);
-        auto_swipe.reset();
     });
 
     next_button.addEventListener("click", function(){ 
         moveSlide(1);
-        auto_swipe.reset();
     });
 
     button_array.forEach(button => {
         button.addEventListener("click", function() {
-            index = getButtonIndex(button);
-            changeButtonColors(index);
-
-            frame.innerHTML = "";
-            frame.appendChild(gallery[index]);
-            auto_swipe.reset();
+            let change = getButtonIndex(button) - index;
+            moveSlide(change);
         });
     });
 
