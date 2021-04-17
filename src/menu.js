@@ -7,9 +7,10 @@ let img_paths = [
     ["../imgs/pandan.PNG", "Green Isle"],
     ["../imgs/raspberry.PNG", "Berry Blast"],
     ["../imgs/peach_marmalade.PNG", "Peach Marmalade"],
-    ["../imgs/butterscotch.PNG", "Sir Buttersworth"],
+    ["../imgs/chocolate.PNG", "Loco Choco"],
     ["../imgs/cashew.PNG", "Nutty"],
-    ["../imgs/apricot.PNG", "Sunset Avenue"]
+    ["../imgs/apricot.PNG", "Sunset Avenue"],
+    ["../imgs/durian.PNG", "Durian"]
 ];
 
 const menu = () => {
@@ -39,7 +40,7 @@ const menu = () => {
         <li>
             <div class="info">
                 <p class="title">Loco Choco</p>
-                <p class="description">Dark chocolate ice cream, with oreo crumbs and milk chocolate shavings.</p>
+                <p class="description">Dark chocolate ice cream, topped with oreo crumbs and milk chocolate shavings.</p>
             </div>
             <p class="price">$5</p>
         </li>
@@ -54,7 +55,7 @@ const menu = () => {
         <li>
             <div class="info">
                 <p class="title">Sir Buttersworth</p>
-                <p class="description">Classic butterscotch ice cream, splendid!</p>
+                <p class="description">Classic butterscotch ice cream, how splendid!</p>
             </div>
             <p class="price">$5</p>
         </li>
@@ -76,6 +77,13 @@ const menu = () => {
             <div class="info">
                 <p class="title">Almond Joy</p>
                 <p class="description">Sweet Coconut ice cream with an almond chocolate dip.</p>
+            </div>
+            <p class="price">$6</p>
+        </li>
+        <li>
+            <div class="info">
+                <p class="title">Durian</p>
+                <p class="description">The king of fruit, packed into a single scoop</p>
             </div>
             <p class="price">$6</p>
         </li>
@@ -117,7 +125,7 @@ const menu = () => {
         <li>
             <div class="info">
                 <p class="title">Peach Marmalade</p>
-                <p class="description">Citrus-y, sweet peach marmalade</p>
+                <p class="description">Citrusy sweet peach marmalade</p>
             </div>
             <p class="price">$7</p>
         </li>

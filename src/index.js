@@ -5,7 +5,6 @@ import {menu} from "./menu.js";
 
 //Page elements
 const base = document.getElementById("content");
-// console.log(base);
 
 let header = document.createElement("header");
 header.innerHTML = `
@@ -28,8 +27,9 @@ content.id = "content-container";
 let footer = document.createElement("footer");
 footer.innerHTML = `
     <p>
-    A project by <a href="github.com" target="_blank">@emarjani</a> 
-    </p>`;
+    A project by<a href="https://github.com/emarjani" target="_blank">@emarjani</a>
+    </p>
+    `;
 //add socials here maybe?
 
 
@@ -67,10 +67,9 @@ Object.entries(tab_names).forEach(function([key,value]) {
             tabs.childNodes[i].style.backgroundColor ="rgb(233, 232, 232)";
         }
         tab.style.backgroundColor = "white";
-        // tab.style.boxShadow = "10px 0 8px -8px rgb(165, 165, 165)";
     });
 });
 
 //with initial load, append homepage to content
-content.appendChild(menu());
+content.appendChild(homepage());
 

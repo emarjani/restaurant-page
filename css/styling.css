@@ -4,9 +4,7 @@ header {
     position: relative;
 }
 
-
 #title-container {
-    /* border: 1px red solid; */
     width: fit-content;
     position: absolute;
     top: 50%;
@@ -29,11 +27,7 @@ header {
 #img-banner {
     width: 100%;
     max-height: 500px;
-    /* border: 1px red solid; */
-    /* crop this img */
-    /* max-height: 400px; */
 }
-
 
 
 a {
@@ -43,12 +37,12 @@ a {
     width: 100%;
     color: rgb(24, 6, 6);
 }
+
 /* //add styling to tabs */
 #tabs {
     position: absolute;
     bottom: 0;
     background-color: rgb(233, 232, 232);
-    /* padding: 5px; */
 
     width: 100%;
     display: flex;
@@ -57,7 +51,6 @@ a {
     font-family: "Open Sans Condensed", arial;
     font-size: 35px;
     font-weight: 600;
-    /* color: rgb(21, 137, 167); */
 }
 
 #tabs a:first-child {
@@ -70,8 +63,50 @@ a {
 
 /* CONTENT */
 
+.content-body {
+    margin-top: 50px;
+    min-height: 350px;
+    padding: 4em;
+    font-family: "Libre Franklin";
+}
 
 /* HOMEPAGE */
+
+.quote {
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+.quote-body {
+    text-align: center;
+    color: rgb(24, 6, 6);
+    font-family: "Pacifico", 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.quote .author {
+    text-align: end;
+    font-size: 16px;
+    margin: 2em 0 0 0;
+}
+
+.section-1 {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.section-1 p{
+    font-size: 17px;
+    line-height: 2em;
+    box-shadow: 15px 15px rgb(19, 88, 105);
+    background-color: rgb(21, 137, 167);
+    color: white;
+    padding: 2em;
+    margin-right: 4em;
+}
 
 #cone-img {
     border-radius: 50%;
@@ -79,74 +114,62 @@ a {
 
 
 
-.quote {
-    width: fit-content;
-    margin: 0 auto;
-}
-
-.quote-body {
-    color: rgb(21, 137, 167);
-    margin-top: 8rem;
-    font-family: "Pacifico", 'Times New Roman', Times, serif;
-    font-size: 50px;
-}
-
-.quote .author {
-    /* border: 1px red solid; */
-    text-align: end;
-    font-size: 16px;
-    margin: 2em 0 0 0;
-}
-
-
-.content-body {
-    margin-top: 50px;
-    min-height: 550px;
-    font-family: "Libre Franklin";
-}
-
-
-#featured-imgs {
-    display: flex;
-    justify-content: space-around;
-}
-
-#featured-imgs img {
-    max-width: 400px;
-}
-
 /* ABOUT US */
 #about-title {
     font-size: 30px;
     margin-bottom: 1em;
 }
 
-#about-container {
-    border: 2px solid red;
-    margin: 2em;
-    padding: 0 4rem 0 4rem;
+#about-container .blue {
+    color: rgb(21, 137, 167);
+    font-weight: 600;
 }
+
 
 #about-img {
+    float: left;
+    margin: 0 1em 1em 0;
 }
 
-#about-info {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 #about-container p{
     line-height: 2em;
-    margin-left: 2rem;
     font-size: 20px;
 }
 
-/* /////////////////////// */
+
+/* MEnu styling */
+
+
+#menu-content ul {
+    margin-top: 4rem;
+}
+
+#menu-content li {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0 1em 0;
+
+}
+
+#menu-content .title {
+    font-size: 18px;
+}
+
+#menu-content .description {
+    color: grey;
+}
 
 /* contacts */
 
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
 .address-info {
-    /* border:1px red solid; */
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -157,18 +180,13 @@ a {
     max-height: 50px;
 }
 
-.contact-container {
-    /* border: 1px solid; */
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-}
+
 
 .contact-container .info {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border: 2px solid rgb(24, 6, 6);;
+    border: 3px solid rgb(24, 6, 6);;
     padding: 1rem;
 }
 
@@ -191,50 +209,99 @@ a {
 
 
 
-/* MEnu styling */
-
-
-#menu-content {
-    /* border: 1px red solid; */
-    padding: 4em;
-}
-
-#menu-content ul {
-    margin-top: 4rem;
-}
-
-#menu-content li {
-    display: flex;
-    justify-content: space-between;
-    margin: 1em 0 1em 0;
-}
-
-#menu-content .title {
-    font-size: 18px;
-}
-
-#menu-content .description {
-    color: grey;
-}
-
-
-
 
 /* foOTER STYLING */
 footer {
     min-height: 50px;
     background-color: rgb(192, 221, 228);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
 }
 
 footer p {
     font-family: "Open Sans Condensed", arial;
     font-size: 20px;
+}
+footer a {
     text-decoration: none;
+}
+
+footer .icon {
+    max-height: 25px;
 }
 
 
 
+@media screen and (max-width: 1024px) {
+    .content-body {
+        margin-top: 25px;
+    }
+
+    .quote .author {
+        text-align: center;
+    }
+
+    .section-1 {
+        flex-direction: column-reverse;
+        margin-top: 4em;
+    }
+    .section-1 p {
+        margin: 3em 1em 1em 1em;
+    }
+
+    .contact-container {
+        flex-direction: column-reverse;
+    }
+    .address-info {
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+
+    .contact-info, .socials-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #google-maps {
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    #google-maps img {
+        width: 100%;
+    }
+}
 
 
+@media screen and (max-width: 768px) {
+    #title {
+        font-size: 60px;
+    }
 
+    .content-body {
+        /* margin-bottom: 2em; */
+        padding: 2em;
+    }
 
+    .quote {
+        margin-top : 1em;
+    }
+
+    .quote .author {
+        font-size: 14px;
+    }
+
+    #tabs {
+        font-size: 25px;
+    }
+
+    .price {
+        margin-left: 2em;
+    }
+
+    .contact-info, .socials-info {
+        display:inline;
+    }
+}

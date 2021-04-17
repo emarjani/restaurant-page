@@ -11,14 +11,15 @@ const homepage = () => {
         </div>
 
 
-        <div class="">
+        <div class="section-1">
             <p class="text">
-            With both the "old standbys" ("incredible" cookies and cream) and more "interesting" scoops, these parlors "nail it", offering "creamy" housemade ice cream that's a "perfect balance of sweetness and strong flavor"; the simple setups include minimal seating, but Brooklyn has a few outdoor tables.
+            Your one stop shop for homemade artisanal, organic, natural, sweet and delicious ice cream.
+            Our tasty frozen treats continue to spark lines of devoted fans and ice cream connoisseurs.
+            World class ice cream, freshly served in the bustling heart of New York City.
+            La Crème Glacée invites you to come and indulge in the ultimate ice cream experience.
+
             </p>
             <img id="cone-img" src="../imgs/cone.PNG">
-        </div>
-
-        <div class="">
         </div>
         
     `;

@@ -165,3 +165,5 @@ function createGalleryButtons(gallery) {
     }
     return gallery_buttons;
 }
+
+
