@@ -6,7 +6,7 @@ const homepage = () => {
     body.innerHTML = `
 
         <div class="quote">
-            <p class="quote-body">"Exquisite ice cream, extravagent flavours"</p>
+            <p class="quote-body">"Exquisite ice cream, extravagant flavours"</p>
             <p class="author">-Paul Nelson, editor-in-chief of the "The Ice Cream Gazette"</p>
         </div>
 
