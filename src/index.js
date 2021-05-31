@@ -25,7 +25,7 @@ content.id = "content-container";
 let footer = document.createElement("footer");
 footer.innerHTML = `
     <p>
-    A project by<a href="https://github.com/emarjani" target="_blank">@emarjani</a>
+    A project by<a href="https://github.com/emdevs" target="_blank">@emdevs</a>
     </p>
     `;
 
