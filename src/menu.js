@@ -16,9 +16,25 @@ let img_paths = [
 const menu = () => {
     let body = document.createElement("div");
     body.setAttribute("class", "content-body");
+    body.id = "menu";
 
     let menu_content = document.createElement("div");
     menu_content.id = "menu-content";
+
+    const menu_text_1 = document.createElement("p");
+    menu_text_1.id = "menu-text-1";
+    menu_text_1.className = "menu-text";
+    menu_text_1.textContent = "MENU";
+
+
+    const menu_text_2 = document.createElement("p");
+    menu_text_2.id = "menu-text-2";
+    menu_text_2.className = "menu-text";
+    menu_text_2.textContent = "FLAVOUR LIST";
+
+    body.appendChild(menu_text_1);
+    body.appendChild(menu_text_2);
+
 
     menu_content.appendChild(slideshow(img_paths));
     menu_content.insertAdjacentHTML("beforeend", `    

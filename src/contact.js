@@ -3,6 +3,7 @@ export {contact}
 const contact = () => {
     let body = document.createElement("div");
     body.setAttribute("class", "content-body");
+    body.id = "contact";
     body.innerHTML = `
 
     <div class="contact-container">

@@ -3,6 +3,7 @@ export {homepage}
 const homepage = () => {
     let body = document.createElement("div");
     body.setAttribute("class", "content-body");
+    body.id = "homepage";
     body.innerHTML = `
 
         <div class="quote">

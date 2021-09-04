@@ -2,11 +2,13 @@ import {homepage} from "./homepage.js";
 import {about} from "./about.js";
 import {contact} from "./contact.js";
 import {menu} from "./menu.js";
+// import Navbar from "./navbar.js"
 
 //Page elements
 const base = document.getElementById("content");
 
 let header = document.createElement("header");
+header.id = "header"
 header.innerHTML = `
 <div id="title-container">
     <h1 id="title">La Crème Glacée</h1>
@@ -15,6 +17,44 @@ header.innerHTML = `
 <img id="img-banner" src="../imgs/abstractlarge.jpg">
 `
 ;
+
+//NAVBAR
+
+const navbar = document.createElement("div");
+navbar.id = "navbar";
+
+
+const header_link = document.createElement("a");
+header_link.href = "#header";
+header_link.textContent = "HEADER";
+
+const home_link = document.createElement("a");
+home_link.href = "#homepage";
+home_link.textContent = "HOME";
+
+const menu_link = document.createElement("a");
+menu_link.href = "#menu";
+menu_link.textContent = "Menu";
+
+const about_link = document.createElement("a");
+about_link.href = "#about";
+about_link.textContent = "About";
+
+
+const contact_link = document.createElement("a");
+contact_link.href = "#contact";
+contact_link.textContent = "Contact";
+
+
+
+
+navbar.appendChild(header_link);
+navbar.appendChild(home_link);
+navbar.appendChild(menu_link);
+navbar.appendChild(about_link);
+navbar.appendChild(contact_link);
+
+
 
 let tabs = document.createElement("div");
 tabs.id = "tabs";
@@ -57,11 +97,17 @@ Object.entries(tab_names).forEach(function([key,value]) {
 });
 
 
-header.appendChild(tabs);
+// header.appendChild(tabs);
+base.appendChild(navbar);
 base.appendChild(header);
-base.appendChild(content);
+// base.appendChild(Navbar);
+// base.appendChild(content);
+base.appendChild(homepage());
+base.appendChild(menu());
+base.appendChild(about());
+base.appendChild(contact());
 base.appendChild(footer);
 
 //with initial load, append homepage to content
-content.appendChild(homepage());
+// content.appendChild(homepage());
 
