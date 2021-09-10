@@ -8,8 +8,10 @@ body {
 
 #content {
     /* border: 2px blue dashed; */
+    font-size: 20px;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
@@ -22,11 +24,11 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
-    background-color: black;
 }
 
 #navbar a {
-    color: grey;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(63, 63, 63);
     font-size: 25px;
 }
 
@@ -37,13 +39,36 @@ header {
     /* border: 2px blue solid; */
 }
 
+/* div {
+    border: 1px green solid;
+}
+ */
+
+#side-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh;
+    width: 100vw; */
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 80px;
+    /* border: 2px red solid; */
+    position: absolute;
+    z-index: 2;
+}
+
+#icecream-cone {
+    position: absolute;
+    bottom: -20%;
+    left: 55%;
+    max-width: 750px;
+}
+
+/* make this left hand instead. */
 #title-container {
     width: fit-content;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     background-color: white;
     border-radius: 70px;
     box-shadow: 5px 5px rgb(189, 189, 189);
@@ -51,16 +76,35 @@ header {
 }
 
 #title {
-    font-size: 80px;
+    font-size: 90px;
     color:  rgb(21, 137, 167);
     font-family: "Pacifico", 'Times New Roman', Times, serif;
 }
+
+#side-container p {
+    width: 80%;
+    max-width: 700px;
+    margin-top: 2rem;
+    color: rgb(37, 37, 37);
+    background-color: white;
+    border-radius: 8px;
+    padding: 1em;
+    text-align: justify;
+    box-shadow: 6px 6px rgb(189, 189, 189);
+    font-size: 22px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
 
 
 #img-banner {
     position: fixed;
     z-index: -1;
     width: 100%;
+    height: 100vh;
+    width: 100vw;
     max-height: 100vh;
 }
 
@@ -101,25 +145,68 @@ a {
 .content-body {
     /* scroll-snap-align: start; */
     /* border: 2px red solid; */
-
-
-
-    /* height: 100%;
-    width: 100%; */
-
     max-width: 100vw;
     min-height: 100vh; 
-
-    /* margin-top: 50px; */
-    /* min-height: 350px; */
-    /* padding: 4em; */
     font-family: "Libre Franklin";
 }
 
 /* HOMEPAGE */
 
+#shape-1 {
+    top: 5%;
+    left: 5%;
+    clip-path: polygon(1% 99%, 26% 64%, 75% 45%, 100% 28%, 81% 61%, 90% 84%);
+}
+
+
+#shape-2 {
+    top: 5%;
+    right: 5%;
+    clip-path: polygon(16% 46%, 19% 28%, 23% 20%, 55% 55%, 77% 12%, 58% 76%);
+}
+
+#shape-3 {
+    clip-path: polygon(100% 39%, 0% 100%, 85% 90%);
+    bottom: 5%;
+    right: 10%;
+}
+
+#shape-4 {
+    clip-path: polygon(25% 0%, 48% 53%, 100% 50%, 60% 67%, 41% 82%, 1% 31%);
+    bottom: 7%;
+    left: 20%;
+}
+
+#shape-5 {
+    clip-path: polygon(71% 18%, 99% 53%, 55% 51%, 15% 80%, 0% 50%);
+    left: 50%;
+    top: 50%;
+}
+
+#shape-6 {
+    clip-path: polygon(72% 28%, 90% 20%, 77% 61%, 75% 100%, 38% 45%, 0% 60%, 10% 20%);
+    left: 30%;
+    top: 35%;
+}
+
+#shape-7 {
+    clip-path: polygon(20% 0%, 0% 20%, 6% 34%, 0% 80%, 67% 56%, 88% 42%, 80% 100%, 100% 80%, 100% 61%, 100% 20%, 80% 0%, 21% 55%);
+    top: 45%;
+    left: 75%;
+}
+
+
+#homepage .shape {
+    position:absolute;
+    width: 300px;
+    height: 200px;
+    background-color: rgba(21, 137, 167, 1);
+}
+
+
 #homepage {
     /* background-color: rgb(245, 243, 166); */
+    position: relative;
     background-color: black;
     color: white;
     /* height: 100vh; */
@@ -133,15 +220,17 @@ a {
 }
 
 .quote-body {
+    margin: 2rem;
     text-align: center;
-    color: rgb(24, 6, 6);
+    mix-blend-mode: lighten;
+    color: white;
     font-family: "Pacifico", 'Times New Roman', Times, serif;
     font-size: 50px;
 }
 
 .quote .author {
     text-align: end;
-    font-size: 16px;
+    /* font-size: 16px; */
     margin: 2em 0 0 0;
 }
 
@@ -153,17 +242,19 @@ a {
 }
 
 .section-1 p{
-    font-size: 17px;
+    /* font-size: 23px; */
     line-height: 2em;
-    box-shadow: 15px 15px rgb(19, 88, 105);
-    background-color: rgb(21, 137, 167);
+    z-index: 2;
+    /* box-shadow: 15px 15px rgb(19, 88, 105);
+    background-color: rgb(21, 137, 167); */
     color: white;
     padding: 2em;
     margin-right: 4em;
 }
 
 #cone-img {
-    border-radius: 50%;
+    z-index: 2;
+    /* border-radius: 50%; */
 }
 
 
@@ -271,7 +362,7 @@ a {
 
 #about-right-container p{
     line-height: 2em;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 
 
@@ -310,10 +401,8 @@ a {
 #menu-text-2 {
     font-size: 25px;
     color:  rgb(21, 137, 167);
-    top: 120px;
-    left: 20px;
-    /* transform: rotate(-90deg); */
-    /* transform: rotate(-90deg) scale(-1, 1); */
+    top: 2em;
+    left: 1em;
 }
 
 
@@ -336,7 +425,7 @@ a {
 }
 
 #menu-content .title {
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 #menu-content .description {
@@ -346,7 +435,7 @@ a {
 /* contacts */
 
 #contact {
-    border: 2px yellow solid;
+    /* border: 15px black solid; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -361,7 +450,7 @@ a {
 .address-info {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    /* font-size: 18px; */
 
 }
 
@@ -403,8 +492,10 @@ a {
 
 /* foOTER STYLING */
 footer {
-    min-height: 50px;
-    background-color: rgb(192, 221, 228);
+    min-height: 80px;
+    /* background-color: rgb(192, 221, 228);
+     */
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -413,16 +504,43 @@ footer {
 
 footer p {
     font-family: "Open Sans Condensed", arial;
-    font-size: 20px;
+    /* font-size: 20px; */
+    color: white;
 }
 footer a {
     text-decoration: none;
 }
 
 
+
+/* at 1000px should be mobile friendly. */
+
 @media screen and (max-width: 1024px) {
+
+    /* MENU */
+
+    #menu {
+        border: 2px pink solid;
+    }
+
+    #menu-content ul {
+        display: grid;
+        grid-template: auto / 1fr;
+        column-gap: 3rem;
+        margin-top: 4rem;
+    }
+
+    #menu-text-1 {
+        top: 600px;
+    }
+
+
+
+    
+
     .content-body {
-        margin-top: 25px;
+        font-size: 22px;
+        /* margin-top: 25px; */
     }
 
     .quote .author {
@@ -462,13 +580,21 @@ footer a {
 
 
 @media screen and (max-width: 768px) {
+    #menu {
+        border: 2px green solid;
+    }
+
+    #menu-text-1 {
+        display: none;
+    }
+
     #title {
         font-size: 60px;
     }
 
     .content-body {
         /* margin-bottom: 2em; */
-        padding: 2em;
+        /* padding: 2em; */
     }
 
     .quote {

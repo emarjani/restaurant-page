@@ -2,6 +2,11 @@ export {homepage}
 
 const homepage = () => {
     let body = document.createElement("div");
+
+    //add shapes manually to body.
+    let shape_number = 7;
+
+
     body.setAttribute("class", "content-body");
     body.id = "homepage";
     body.innerHTML = `
@@ -10,7 +15,6 @@ const homepage = () => {
             <p class="quote-body">"Exquisite ice cream, extravagant flavours"</p>
             <p class="author">-Paul Nelson, editor-in-chief of the "The Ice Cream Gazette"</p>
         </div>
-
 
         <div class="section-1">
             <p class="text">
@@ -24,5 +28,13 @@ const homepage = () => {
         </div>
         
     `;
+
+    // for (let i=0; i < shape_number; i++) {
+    //     let shape = document.createElement("div");
+    //     shape.id = `shape-${i+1}`
+    //     shape.className = "shape"
+    //     body.appendChild(shape);
+    // }
+
     return body;
 };

@@ -9,10 +9,20 @@ const base = document.getElementById("content");
 
 let header = document.createElement("header");
 header.id = "header"
+header.className = "content-body"
 header.innerHTML = `
-<div id="title-container">
-    <h1 id="title">La Crème Glacée</h1>
+
+<div id="side-container">
+    <div id="title-container">
+        <h1 id="title">La Crème Glacée</h1>
+    </div>
+
+    <p>Your one stop shop for homemade artisanal, organic, natural, sweet and delicious ice cream.
+    We invite you to come and indulge in the ultimate ice cream experience.
+    </p>
 </div>
+
+<img id="icecream-cone" src="../imgs/ice-cream-cone-stroke-color-by-Vexels.png">
 
 <img id="img-banner" src="../imgs/abstractlarge.jpg">
 `
@@ -26,11 +36,11 @@ navbar.id = "navbar";
 
 const header_link = document.createElement("a");
 header_link.href = "#header";
-header_link.textContent = "HEADER";
+header_link.textContent = "Header";
 
-const home_link = document.createElement("a");
-home_link.href = "#homepage";
-home_link.textContent = "HOME";
+// const home_link = document.createElement("a");
+// home_link.href = "#homepage";
+// home_link.textContent = "Home";
 
 const menu_link = document.createElement("a");
 menu_link.href = "#menu";
@@ -49,7 +59,7 @@ contact_link.textContent = "Contact";
 
 
 navbar.appendChild(header_link);
-navbar.appendChild(home_link);
+// navbar.appendChild(home_link);
 navbar.appendChild(menu_link);
 navbar.appendChild(about_link);
 navbar.appendChild(contact_link);
@@ -100,14 +110,10 @@ Object.entries(tab_names).forEach(function([key,value]) {
 // header.appendChild(tabs);
 base.appendChild(navbar);
 base.appendChild(header);
-// base.appendChild(Navbar);
-// base.appendChild(content);
-base.appendChild(homepage());
+// base.appendChild(homepage());
 base.appendChild(menu());
 base.appendChild(about());
 base.appendChild(contact());
 base.appendChild(footer);
 
-//with initial load, append homepage to content
-// content.appendChild(homepage());
 
