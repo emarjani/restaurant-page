@@ -2,7 +2,6 @@ import {homepage} from "./homepage.js";
 import {about} from "./about.js";
 import {contact} from "./contact.js";
 import {menu} from "./menu.js";
-// import Navbar from "./navbar.js"
 
 //Page elements
 const base = document.getElementById("content");
@@ -39,7 +38,7 @@ header_link.href = "#header";
 header_link.textContent = "Header";
 
 // const home_link = document.createElement("a");
-// home_link.href = "#homepage";
+// home_link.href = "#homepage"
 // home_link.textContent = "Home";
 
 const menu_link = document.createElement("a");
@@ -57,13 +56,11 @@ contact_link.textContent = "Contact";
 
 
 
-
 navbar.appendChild(header_link);
 // navbar.appendChild(home_link);
 navbar.appendChild(menu_link);
 navbar.appendChild(about_link);
 navbar.appendChild(contact_link);
-
 
 
 let tabs = document.createElement("div");
@@ -75,7 +72,6 @@ content.id = "content-container";
 let footer = document.createElement("footer");
 footer.innerHTML = `
     <p>
-    A project by<a href="https://github.com/emdevs" target="_blank">@emdevs</a>
     </p>
     `;
 
